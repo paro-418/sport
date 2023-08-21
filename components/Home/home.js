@@ -3,6 +3,7 @@ import React from 'react';
 import Sideways from '../Sideways/Sideways';
 import Slider from '../Slider/Slider';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
+import SubscribeForm from '../SubscribeForm/SubscribeForm';
 const sidewaysArray = [
   {
     imagePath: '/images/baseball.jpg',
@@ -140,6 +141,9 @@ const HomePage = () => {
           sidewaysArray={sidewaysArray}
           heading='Special Sports'
           className=' border-gray-200 flex flex-col  w-[70%] mx-auto gap-8 text-primary'
+          innerSmallDivBasis='basis-[40%]'
+          innerLargeDivBasis='basis-[60%]'
+          imageDimension={500}
         />
       </div>
 
@@ -185,30 +189,13 @@ const HomePage = () => {
       </div>
 
       <div className='flex items-center justify-around  my-20 py-8 px-32 '>
-        <p className=' text-4xl w-[30%]'>What our customer thinks &rarr;</p>
+        <p className=' text-4xl w-[30%] text-primary font-bold'>
+          What our customer thinks &rarr;
+        </p>
         <Slider className='flex w-1/2' slides={slides} />
       </div>
 
-      <div className='flex justify-around my-20 bg-primary text-white py-14'>
-        <div className='w-[30%] flex flex-col gap-2'>
-          <p className='text-4xl font-bold'>Stay Connected</p>
-          <p>
-            would you like to be updated about events and special occasions? Hit
-            the subscribe button and stay tunned
-          </p>
-        </div>
-        <div className='w-[40%] flex flex-col gap-4 '>
-          <input
-            type='text'
-            className='w-full p-2 rounded text-black text-xl'
-            placeholder='abc@gmail.com'
-          />
-
-          <button className='text-xl border-2 border-white w-fit hover:text-white  rounded p-2 hover:bg-white hover:text-primary '>
-            subscribe now
-          </button>
-        </div>
-      </div>
+      <SubscribeForm />
 
       <div className='flex flex-col justify-center items-center  '>
         {/* <p>Gallery</p> */}
