@@ -7,19 +7,22 @@ import SubscribeForm from '../SubscribeForm/SubscribeForm';
 import { useInView } from 'react-intersection-observer';
 const sidewaysArray = [
   {
-    imagePath: '/images/baseball.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635011/baseball_qyhua6.jpg',
     paragraph:
       'A variety of appetizers to get you started. Apart from the many dishes you could also try a Spicy Mushrooms Saganaki, which has juicy mushrooms cooked in fresh spicy tomato sauce, green herbs,topped with cheddar & feta cheese.',
     subheading: 'cricket',
   },
   {
-    imagePath: '/images/baseball.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635011/baseball_qyhua6.jpg',
     paragraph:
       'A variety of appetizers to get you started. Apart from the many dishes you could also try a Spicy Mushrooms Saganaki, which has juicy mushrooms cooked in fresh spicy tomato sauce, green herbs,topped with cheddar & feta cheese.',
     subheading: 'Parkour',
   },
   {
-    imagePath: '/images/baseball.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635011/baseball_qyhua6.jpg',
     paragraph:
       'A variety of appetizers to get you started. Apart from the many dishes you could also try a Spicy Mushrooms Saganaki, which has juicy mushrooms cooked in fresh spicy tomato sauce, green herbs,topped with cheddar & feta cheese.',
     subheading: 'Horse Riding',
@@ -33,13 +36,13 @@ const slides = [
 ];
 
 const photos = [
-  '/images/baseball.jpg',
-  '/images/rugby.jpg',
-  '/images/rugby2.jpg',
-  '/images/basketball2.jpg',
-  '/images/boating.jpg',
-  '/images/horseride.jpg',
-  '/images/mountain.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635011/baseball_qyhua6.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635026/rugby_u79g3b.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635028/rugby2_wsapuk.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635001/basketball2_enqjqf.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635011/boating_tjsrmk.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635021/horseride_adgudf.jpg',
+  'https://res.cloudinary.com/sportsite/image/upload/v1692635032/mountain_qtrikk.jpg',
   // Add more photo URLs here
 ];
 
@@ -62,10 +65,22 @@ const HomePage = () => {
   return (
     <section>
       <div className=' grid grid-cols-4 relative '>
-        <img src='/images/basketball2.jpg' className='opacity-100' />
-        <img src='/images/boxing.jpg' className='opacity-100' />
-        <img src='/images/rugby.jpg' className='opacity-100' />
-        <img src='/images/boating.jpg' className='opacity-100' />
+        <img
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635001/basketball2_enqjqf.jpg'
+          className='opacity-100'
+        />
+        <img
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635012/boxing_nioxdu.jpg'
+          className='opacity-100'
+        />
+        <img
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635026/rugby_u79g3b.jpg'
+          className='opacity-100'
+        />
+        <img
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635011/boating_tjsrmk.jpg'
+          className='opacity-100'
+        />
         <div className='absolute top-0 left-0 bottom-0 right-0 font-bold text-8xl  text-white '>
           {/* <span>Where Champions rise</span> <span>and dreams takes fly</span> */}
           <div className='flex flex-col justify-center pl-[30rem] pt-[5rem] '>
@@ -101,30 +116,30 @@ const HomePage = () => {
           </div>
           <div className='relative basis-[75%] '>
             <Image
-              src='/images/motorrace.jpg'
+              src='https://res.cloudinary.com/sportsite/image/upload/v1692635025/motorrace_ygbg5x.jpg'
               className={`absolute top-[-25%] left-[50%] shadow-lg ${
                 motorraceView && 'animate-topToBottom'
               }`}
               alt='sport image'
               width={250}
               height={500}
-              loading='lazy'
+              loading='eager'
               ref={motorraceRef}
             />
             <Image
               width={300}
               height={600}
-              src='/images/skiing.jpg'
+              src='https://res.cloudinary.com/sportsite/image/upload/v1692635038/skiing_eitvsu.jpg'
               className={`absolute bottom-[0%] left-[20%]  shadow-lg ${
                 skiingView && 'animate-leftToRight'
               }`}
               alt='sport image'
-              loading='lazy'
+              loading='eager'
               ref={skiingRef}
             />
             <Image
-              src='/images/runner.jpg'
-              loading='lazy'
+              src='https://res.cloudinary.com/sportsite/image/upload/v1692635040/runner_wptxcn.jpg'
+              loading='eager'
               className={`absolute bottom-[10%] right-[5%]  shadow-lg ${
                 runnerView && 'animate-rightToLeft'
               }`}
@@ -142,7 +157,7 @@ const HomePage = () => {
           width={350}
           height={700}
           alt='athlete'
-          src='/images/parkor.jpg'
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635023/parkor_augo1d.jpg'
           className={`absolute right-[-5%] -top-[0%]  -rotate-12 border-2 shadow-xl origin-bottom-right ${
             parkorView && 'animate-leanLeft'
           }`}
@@ -152,7 +167,7 @@ const HomePage = () => {
           width={250}
           height={500}
           alt='athlete'
-          src='/images/horseride.jpg'
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635021/horseride_adgudf.jpg'
           className={`absolute bottom-[10%] rotate-12 -left-[1%] shadow-xl origin-bottom-left ${
             horserideView && 'animate-leanRight'
           }`}
@@ -219,7 +234,6 @@ const HomePage = () => {
       <SubscribeForm />
 
       <div className='flex flex-col justify-center items-center  '>
-        {/* <p>Gallery</p> */}
         <div className='w-[80%] flex gap-4'>
           <PhotoGallery photos={photos} className='basis-[70%] ' />
           <div className='basis-[70%]  flex flex-col text-primary'>

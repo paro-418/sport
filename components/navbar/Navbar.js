@@ -5,7 +5,10 @@ const lists = ['Home', 'About us', 'Equipments', 'Contact Us'];
 const Navbar = () => {
   return (
     <nav className='border-b-[1px] border-primary flex items-center justify-between px-6 top-0 sticky bg-white z-50'>
-      <img src='./images/logo.png' className='w-28 text-white' />
+      <img
+        src='https://res.cloudinary.com/sportsite/image/upload/v1692635021/logo_qrnoos.png'
+        className='w-28 text-white'
+      />
 
       <ul className='flex gap-12 text-primary '>
         {lists.map((list) => (

@@ -14,19 +14,22 @@ const slides = [
 
 const sidewaysArray = [
   {
-    imagePath: '/images/cricketball.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635011/cricketball_izzmwy.jpg',
     paragraph:
       'Thalassa has a legacy of hearty food right from the land of its origin. Generous portions, authentic Greek cuisine and served with love would sum up the culinary delight. One is spoilt for choice with fresh, crisp salads that are bursting with flavour or grilled meats / seafood. Starters to Desserts, there is something to cater to every palate. The very special occasions warrant lamb on a spit, a Greek tradition on birthdays and festivals like Easter and Christmas.',
     subheading: 'Cricket',
   },
   {
-    imagePath: '/images/baseball.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635011/baseball_qyhua6.jpg',
     paragraph:
       'All Thalassa locations are carefully chosen to bring you spaces with that integrate nature. They are spacious, airy and conveniently situated be it by the river front or in the heart of the capital city of Goa. Ample parking and valet service are available so you can focus on having a good time.',
     subheading: 'Baseball',
   },
   {
-    imagePath: '/images/football3.jpg',
+    imagePath:
+      'https://res.cloudinary.com/sportsite/image/upload/v1692635018/football3_g41zdq.jpg',
     paragraph:
       'Think Greece and you are sure to paint a picture of azure skies and whites. Thalassa has strains of Corfu in its Classy chic décor that make a stunning contrast to the gorgeous blues and greens of Goa. The Bar is not to be missed with its signature look and we love to see our patrons enjoying themselves.',
     subheading: 'Football',
@@ -55,7 +58,7 @@ const AboutUs = () => {
             </div>
             <Image
               alt='team'
-              src='/images/rugbyteam.jpg'
+              src='https://res.cloudinary.com/sportsite/image/upload/v1692635030/rugbyteam_m6gd3p.jpg'
               width={370}
               height={90}
               className='shadow-2xl hover:scale-[102%] duration-100'
@@ -64,7 +67,7 @@ const AboutUs = () => {
           <div className='flex gap-20'>
             <Image
               alt='time'
-              src='/images/time.jpg'
+              src='https://res.cloudinary.com/sportsite/image/upload/v1692635066/time_lwudnt.jpg'
               width={350}
               height={350}
               className='shadow-2xl hover:scale-[102%] duration-100'
@@ -101,7 +104,7 @@ const AboutUs = () => {
       </div>
       <div className=' flex justify-between bg-primary gap-4 relative h-[25rem] my-16'>
         <Image
-          src='/images/tennis.jpg'
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635068/tennis_il6ntg.jpg'
           width={400}
           height={400}
           alt='celebration'
@@ -113,7 +116,7 @@ const AboutUs = () => {
           </button>
         </div>
         <Image
-          src='/images/parkor.jpg'
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635023/parkor_augo1d.jpg'
           width={400}
           height={400}
           alt='celebration'
@@ -151,7 +154,7 @@ const AboutUs = () => {
       <article className=' my-28  pr-32 pb-28 border-[1px] border-slate-200  py-6 bg-slate-100 relative'>
         <div className='relative my-10'>
           <Image
-            src='/images/skiing.jpg'
+            src='https://res.cloudinary.com/sportsite/image/upload/v1692635038/skiing_eitvsu.jpg'
             alt='entertainment'
             width={300}
             height={600}
@@ -164,7 +167,7 @@ const AboutUs = () => {
           <div className='flex justify-center  '>
             <div className='  basis-[25%] '>
               <Image
-                src='/images/entertainment.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635018/entertainment_fe5iqk.jpg'
                 alt='entertainment'
                 className='w-full hover:scale-[102%] duration-100 '
                 width={300}
@@ -179,7 +182,7 @@ const AboutUs = () => {
             </div>
             <div className=' flex flex-col gap-8 relative basis-1/2'>
               <Image
-                src='/images/entertainment3.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635015/entertainment3_q9qgw1.jpg'
                 alt='entertainment'
                 className='w-[20rem] absolute -left-[10%] top-[23%] hover:scale-[102%] duration-100'
                 width={200}
@@ -215,7 +218,7 @@ const AboutUs = () => {
         {/* /////////////// */}
         <div className='relative mt-32'>
           <Image
-            src='/images/footballmodel.jpg'
+            src='https://res.cloudinary.com/sportsite/image/upload/v1692635017/footballmodel_zagfgj.jpg'
             alt='entertainment'
             width={300}
             height={600}
@@ -228,7 +231,7 @@ const AboutUs = () => {
           <div className='flex justify-center flex-row-reverse  '>
             <div className='  basis-[25%]'>
               <Image
-                src='/images/store2.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635044/store2_rlrrus.jpg'
                 alt='entertainment'
                 className='w-full hover:scale-[102%] duration-100 '
                 width={300}
@@ -243,7 +246,7 @@ const AboutUs = () => {
             </div>
             <div className=' flex flex-col gap-8 relative basis-1/2  '>
               <Image
-                src='/images/store.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635057/store_tcged1.jpg'
                 alt='store'
                 className='w-[20rem] absolute -right-[10%] top-[23%] hover:scale-[102%] duration-100'
                 width={200}
@@ -297,7 +300,7 @@ const AboutUs = () => {
                 alt='people'
                 width={300}
                 height={300}
-                src='/images/people1.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635024/people1_gxi5ar.jpg'
                 className='shadow-lg'
               />
               <p className='text-lg font-bold capitalize'>Spiro grana Grana</p>
@@ -314,7 +317,7 @@ const AboutUs = () => {
                 alt='people'
                 width={300}
                 height={300}
-                src='/images/people2.jpg'
+                src='https://res.cloudinary.com/sportsite/image/upload/v1692635030/people2_fjfomu.jpg'
                 className='shadow-lg'
               />
               <p className='text-lg font-bold capitalize'>Mariketty Grana</p>

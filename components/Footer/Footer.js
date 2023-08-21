@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='w-full bg-primary mt-16 pb-16 flex flex-col justify-center items-center gap-8 text-white'>
       <div className='flex flex-col'>
         <img
-          src='/images/logo.png'
+          src='https://res.cloudinary.com/sportsite/image/upload/v1692635021/logo_qrnoos.png'
           alt='logo'
           className='invert w-[10rem] cursor-pointer'
         />
