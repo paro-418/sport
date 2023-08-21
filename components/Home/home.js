@@ -4,6 +4,7 @@ import Sideways from '../Sideways/Sideways';
 import Slider from '../Slider/Slider';
 import PhotoGallery from '../PhotoGallery/PhotoGallery';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
+import { useInView } from 'react-intersection-observer';
 const sidewaysArray = [
   {
     imagePath: '/images/baseball.jpg',
@@ -53,6 +54,11 @@ const ThemeAndDescription = ({ heading, pngPath, description }) => {
 };
 
 const HomePage = () => {
+  const { ref: skiingRef, inView: skiingView } = useInView();
+  const { ref: motorraceRef, inView: motorraceView } = useInView();
+  const { ref: runnerRef, inView: runnerView } = useInView();
+  const { ref: parkorRef, inView: parkorView } = useInView();
+  const { ref: horserideRef, inView: horserideView } = useInView();
   return (
     <section>
       <div className=' grid grid-cols-4 relative '>
@@ -96,27 +102,36 @@ const HomePage = () => {
           <div className='relative basis-[75%] '>
             <Image
               src='/images/motorrace.jpg'
-              className='absolute top-[-25%] left-[50%] shadow-lg'
+              className={`absolute top-[-25%] left-[50%] shadow-lg ${
+                motorraceView && 'animate-topToBottom'
+              }`}
               alt='sport image'
               width={250}
               height={500}
               loading='lazy'
+              ref={motorraceRef}
             />
             <Image
               width={300}
               height={600}
               src='/images/skiing.jpg'
-              className=' absolute bottom-[0%] left-[20%]  shadow-lg'
+              className={`absolute bottom-[0%] left-[20%]  shadow-lg ${
+                skiingView && 'animate-leftToRight'
+              }`}
               alt='sport image'
               loading='lazy'
+              ref={skiingRef}
             />
             <Image
               src='/images/runner.jpg'
               loading='lazy'
-              className=' absolute bottom-[10%] right-[5%]  shadow-lg'
+              className={`absolute bottom-[10%] right-[5%]  shadow-lg ${
+                runnerView && 'animate-rightToLeft'
+              }`}
               alt='sport image'
               width={400}
               height={200}
+              ref={runnerRef}
             />
           </div>
         </div>
@@ -128,14 +143,20 @@ const HomePage = () => {
           height={700}
           alt='athlete'
           src='/images/parkor.jpg'
-          className='absolute right-[-5%] -top-[0%]  -rotate-12 border-2 shadow-xl'
+          className={`absolute right-[-5%] -top-[0%]  -rotate-12 border-2 shadow-xl origin-bottom-right ${
+            parkorView && 'animate-leanLeft'
+          }`}
+          ref={parkorRef}
         />
         <Image
           width={250}
           height={500}
           alt='athlete'
           src='/images/horseride.jpg'
-          className='absolute bottom-[10%] rotate-12 -left-[1%] shadow-xl'
+          className={`absolute bottom-[10%] rotate-12 -left-[1%] shadow-xl origin-bottom-left ${
+            horserideView && 'animate-leanRight'
+          }`}
+          ref={horserideRef}
         />
         <Sideways
           sidewaysArray={sidewaysArray}
@@ -160,7 +181,7 @@ const HomePage = () => {
             live gigs have to be experienced to taste the spirit of Thalassa.
           </p>
 
-          <button className='border-2 border-primary rounded-sm font-bold p-2 hover:bg-primary hover:text-white hover:shadow-2xl '>
+          <button className='hover:scale-[105%] duration-100 border-2 border-primary rounded-sm font-bold p-2 hover:bg-primary hover:text-white hover:shadow-2xl '>
             Celebrate your Life
           </button>
         </div>
@@ -207,12 +228,15 @@ const HomePage = () => {
               <p className='font-bold'>
                 Get a glimpse of the incredible experience that is Thalassa.
               </p>
-              <button className='text-2xl border-2 hover:text-white border-primary rounded p-2 font-bold hover:bg-primary'>
+              <button className='hover:scale-[105%] duration-100 text-2xl border-2 hover:text-white border-primary rounded p-2 font-bold hover:bg-primary'>
                 follow us
               </button>
             </div>
             <div className='basis-[50%] flex gap-4'>
-              <img src={photos[6]} className='rounded-md' />
+              <img
+                src={photos[6]}
+                className='rounded-md hover:scale-[102%] duration-100'
+              />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import React from 'react';
 import Sideways from '../Sideways/Sideways';
 import Slider from '../Slider/Slider';
 import SubscribeForm from '../SubscribeForm/SubscribeForm';
+import { useInView } from 'react-intersection-observer';
 
 const slides = [
   'here is something for everyone who visits whether a quiet late morning or a wild party night. The dazzling views and spectacular live gigs have to be experienced to taste the spirit of Thalassa.',
@@ -33,6 +34,9 @@ const sidewaysArray = [
 ];
 
 const AboutUs = () => {
+  const { ref: skiingRef, inView: skiingView } = useInView();
+  const { ref: modelRef, inView: modelView } = useInView();
+
   return (
     <section className='overflow-hidden '>
       <div className='flex  gap-16  bg-slate-100 pr-8 pl-8 mt-10 relative'>
@@ -54,7 +58,7 @@ const AboutUs = () => {
               src='/images/rugbyteam.jpg'
               width={370}
               height={90}
-              className='shadow-2xl'
+              className='shadow-2xl hover:scale-[102%] duration-100'
             />
           </div>
           <div className='flex gap-20'>
@@ -63,7 +67,7 @@ const AboutUs = () => {
               src='/images/time.jpg'
               width={350}
               height={350}
-              className='shadow-2xl'
+              className='shadow-2xl hover:scale-[102%] duration-100'
             />
             <div className='flex flex-col gap-6 justify-center text-lg    '>
               <p>
@@ -151,7 +155,10 @@ const AboutUs = () => {
             alt='entertainment'
             width={300}
             height={600}
-            className='absolute -right-[15%] -top-[20%] -rotate-12'
+            className={`absolute -right-[15%] -top-[20%] -rotate-12 origin-bottom-right hover:scale-[102%] duration-100 ${
+              skiingView && 'animate-leanLeft'
+            }`}
+            ref={skiingRef}
           />
 
           <div className='flex justify-center  '>
@@ -159,14 +166,14 @@ const AboutUs = () => {
               <Image
                 src='/images/entertainment.jpg'
                 alt='entertainment'
-                className='w-full '
+                className='w-full hover:scale-[102%] duration-100 '
                 width={300}
                 height={300}
               />
               <p className='  w-[65%] mt-8'>
                 It is sure to draw you in and make you a part of the
                 celebrations. Surrender to the rhythm and pulse of Thalassa and
-                entertainmentecome part of an incredible experience, one you
+                entertainment part of an incredible experience, one you
                 absolutely have to try.
               </p>
             </div>
@@ -174,7 +181,7 @@ const AboutUs = () => {
               <Image
                 src='/images/entertainment3.jpg'
                 alt='entertainment'
-                className='w-[20rem] absolute -left-[10%] top-[23%]'
+                className='w-[20rem] absolute -left-[10%] top-[23%] hover:scale-[102%] duration-100'
                 width={200}
                 height={500}
               />
@@ -212,7 +219,10 @@ const AboutUs = () => {
             alt='entertainment'
             width={300}
             height={600}
-            className='absolute -right-[15%] -top-[20%] -rotate-12'
+            className={`absolute -right-[15%] hover:scale-[102%] duration-100 -top-[20%] -rotate-12 origin-bottom-right ${
+              modelView && 'animate-leanLeft'
+            }`}
+            ref={modelRef}
           />
 
           <div className='flex justify-center flex-row-reverse  '>
@@ -220,7 +230,7 @@ const AboutUs = () => {
               <Image
                 src='/images/store2.jpg'
                 alt='entertainment'
-                className='w-full '
+                className='w-full hover:scale-[102%] duration-100 '
                 width={300}
                 height={300}
               />
@@ -235,7 +245,7 @@ const AboutUs = () => {
               <Image
                 src='/images/store.jpg'
                 alt='store'
-                className='w-[20rem] absolute -right-[10%] top-[23%]'
+                className='w-[20rem] absolute -right-[10%] top-[23%] hover:scale-[102%] duration-100'
                 width={200}
                 height={500}
               />

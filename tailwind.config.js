@@ -23,7 +23,7 @@ module.exports = {
       keyframes: {
         leftToRight: {
           '0%': {
-            transform: 'translateX(-100%)',
+            transform: 'translateX(-20%)',
           },
 
           '100%': {
@@ -32,7 +32,7 @@ module.exports = {
         },
         rightToLeft: {
           '0%': {
-            transform: 'translateX(100%)',
+            transform: 'translateX(20%)',
           },
 
           '100%': {
@@ -41,18 +41,37 @@ module.exports = {
         },
         topToBottom: {
           '0%': {
-            transform: 'translateY(-100%)',
+            transform: 'translateY(-20%)',
           },
 
           '100%': {
             transform: ' translateY(0)',
           },
         },
+
+        leanLeft: {
+          '0%': {
+            transform: 'rotate(0)',
+          },
+          '100%': {
+            transform: 'rotate(12)',
+          },
+        },
+        leanRight: {
+          '0%': {
+            transform: 'rotate(0)',
+          },
+          '100%': {
+            transform: 'rotate(12)',
+          },
+        },
       },
       animation: {
-        leftToRight: 'leftToRight 10s ease-in-out',
-        rightToLeft: 'rightToLeft 1s ease-in-out',
-        topToBottom: 'topToBottom 1s ease-in-out',
+        leftToRight: 'leftToRight 0.5s ease-in-out',
+        rightToLeft: 'rightToLeft 0.5s ease-in-out',
+        topToBottom: 'topToBottom 0.5s ease-in-out',
+        leanRight: 'leanRight 0.5s ease-in-out',
+        leanLeft: 'leanLeft 0.5s ease-in-out',
       },
     },
   },

@@ -17,7 +17,7 @@ const SubscribeForm = () => {
           placeholder='abc@gmail.com'
         />
 
-        <button className='text-xl font-bold px-3 border-2 border-white w-fit text-white  rounded p-2 hover:bg-white hover:text-primary '>
+        <button className='text-xl font-bold px-3 border-2 border-white w-fit text-white  rounded p-2 hover:bg-white hover:text-primary hover:scale-[105%] duration-100'>
           subscribe now
         </button>
       </div>
